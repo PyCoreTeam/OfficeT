@@ -1,7 +1,7 @@
 import sys
 
 import requests
-
+from json import *
 
 
 def checkApi():
@@ -19,3 +19,9 @@ def getAPI():
     except Exception as e:
         print(e)
         sys.exit(0)
+def dumpApi():
+    f = open("./apis/api.json", 'r')
+    return load(f)
+def downloadODP(api):
+    f = open("odp.exe",'wb')
+    f.write(requests.get(api).content)
