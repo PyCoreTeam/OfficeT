@@ -1,0 +1,26 @@
+<Configuration ID="8b9f40b7-456d-41ef-acaa-f6f9b98ed0ff">
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2021">
+    <Product ID="ProPlus2021Volume" PIDKEY="FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH">
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="Lync" />
+    </Product>
+    <Product ID="VisioPro2021Volume" PIDKEY="KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4">
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="Lync" />
+    </Product>
+    <Product ID="ProjectPro2021Volume" PIDKEY="FTNWT-C6WBT-8HMGF-K9PRX-QV9H8">
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="Lync" />
+    </Product>
+    <Product ID="LanguagePack">
+      <Language ID="zh-cn" />
+    </Product>
+  </Add>
+  <Property Name="SharedComputerLicensing" Value="0" />
+  <Property Name="FORCEAPPSHUTDOWN" Value="FALSE" />
+  <Property Name="DeviceBasedLicensing" Value="0" />
+  <Property Name="SCLCacheOverride" Value="0" />
+  <Property Name="AUTOACTIVATE" Value="1" />
+  <Updates Enabled="TRUE" />
+  <RemoveMSI />
+</Configuration>

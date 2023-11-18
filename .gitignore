@@ -3,4 +3,10 @@ venv
 apis
 odp.exe
 office
-
+build
+dist
+main.spec
+main.build
+main.dist
+main.onefile-build
+main.exe

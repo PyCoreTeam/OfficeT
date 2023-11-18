@@ -1,0 +1,32 @@
+<Configuration ID="bba24841-bccd-4423-9617-d055d34b3aab">
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2021">
+    <Product ID="Standard2021Volume" PIDKEY="KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3">
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+    </Product>
+    <Product ID="VisioStd2021Volume" PIDKEY="MJVNY-BYWPY-CWV6J-2RKRT-4M8QG">
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+    </Product>
+    <Product ID="ProjectStd2021Volume" PIDKEY="J2JDC-NJCYY-9RGQ4-YXWMH-T3D4T">
+      <Language ID="zh-cn" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+    </Product>
+    <Product ID="LanguagePack">
+      <Language ID="zh-cn" />
+    </Product>
+  </Add>
+  <Property Name="SharedComputerLicensing" Value="0" />
+  <Property Name="FORCEAPPSHUTDOWN" Value="FALSE" />
+  <Property Name="DeviceBasedLicensing" Value="0" />
+  <Property Name="SCLCacheOverride" Value="0" />
+  <Property Name="AUTOACTIVATE" Value="1" />
+  <Updates Enabled="TRUE" />
+  <RemoveMSI />
+</Configuration>
