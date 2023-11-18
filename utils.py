@@ -1,4 +1,5 @@
 import sys
+from os import listdir
 
 import requests
 from json import *
@@ -23,5 +24,26 @@ def dumpApi():
     f = open("./apis/api.json", 'r')
     return load(f)
 def downloadODP(api):
-    f = open("odp.exe",'wb')
-    f.write(requests.get(api).content)
+    from tqdm import tqdm
+    r = requests.get(api,verify=False)
+    total = int(r.headers.get('content-length'))
+    progress_bar = tqdm(total=total, desc="ODP - ")
+    for chunk in r.iter_content(chunk_size=8192):
+        progress_bar.update(len(chunk))
+    f = open("./office.zip",'wb')
+    f.write(r.content)
+    progress_bar.close()
+def getConfigs(p=False):
+
+    if p == False:
+
+        return listdir("./configs")
+    else:
+        v = 0
+        for i in listdir("./configs"):
+            v+=1
+            print(str(v),'.', i.replace(".xml", ''))
+        return listdir("./configs")
+
+
+
