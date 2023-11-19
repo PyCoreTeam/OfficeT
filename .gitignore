@@ -15,3 +15,5 @@ oft.zip
 .gitignore
 uninstall.zip
 uninstall
+oft.*
+release

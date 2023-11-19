@@ -1,0 +1,17 @@
+<Configuration ID="2d43e89f-474d-4838-b774-6d9795136cdc">
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2021">
+    <Product ID="VisioPro2021Volume" PIDKEY="KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4">
+      <Language ID="zh-cn" />
+    </Product>
+    <Product ID="LanguagePack">
+      <Language ID="zh-cn" />
+    </Product>
+  </Add>
+  <Property Name="SharedComputerLicensing" Value="0" />
+  <Property Name="FORCEAPPSHUTDOWN" Value="FALSE" />
+  <Property Name="DeviceBasedLicensing" Value="0" />
+  <Property Name="SCLCacheOverride" Value="0" />
+  <Property Name="AUTOACTIVATE" Value="1" />
+  <Updates Enabled="TRUE" />
+  <RemoveMSI />
+</Configuration>
