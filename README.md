@@ -14,7 +14,5 @@
 
 #### 安装
 
-解压压缩包，得到以下三个文件。(以OFFLINE为例子)
-
-
-
+解压压缩包，得到以下几个文件。(以OFFLINE为例子)
+![图片](https://github.com/PyCoreTeam/OfficeT/assets/123795586/2fcc84b3-14a2-4238-9b49-13563347fae9)
