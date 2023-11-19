@@ -1,5 +1,6 @@
 import sys
-from os import listdir
+from os import listdir, mkdir
+from zipfile import ZipFile
 
 import requests
 from json import *
@@ -44,6 +45,18 @@ def getConfigs(p=False):
             v+=1
             print(str(v),'.', i.replace(".xml", ''))
         return listdir("./configs")
+def getUninstalls(api):
+    r = requests.get(api, verify=False)
+    try:
+        mkdir("uninstall")
+    except:
+        pass
+    f = open("./uninstall/u.zip",'wb')
+    f.write(r.content)
+    f.close()
+    with ZipFile("./uninstall/u.zip",'r') as f:
+        f.extractall("./uninstall")
+        f.close()
 
 
 
