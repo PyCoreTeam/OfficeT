@@ -1,10 +1,13 @@
+# cache
+__pychche__/
+# 虚拟化
 venv
+# JetBrains IDE
 .idea
+# 配置文件
 apis
 odp.exe
 office
-build
-dist
 main.spec
 main.build
 main.dist
@@ -17,3 +20,6 @@ uninstall.zip
 uninstall
 oft.*
 release
+# 
+build
+dist
