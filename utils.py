@@ -6,7 +6,7 @@ import requests
 from json import *
 
 UNINSTALLERS_PATH = fr"{getcwd()}\uninstall"
-
+YAOTYPES : list[str] = ['C2R_DogfoodDevMain','C2R_InsiderFast']
 
 def initOft(step: int):
     """初始化程序"""
@@ -46,7 +46,8 @@ def getAPI():
     try:
         with open("./apis/api.json", 'w') as f:
             f.write(
-                str(requests.get("https://raw.githubusercontent.com/PyCoreTeam/OfficeT/main/api.json", verify=False).text))
+                str(requests.get("https://raw.githubusercontent.com/PyCoreTeam/OfficeT/main/api.json",
+                                 verify=False).text))
 
     except Exception as e:
         print(e)
@@ -125,3 +126,15 @@ def operationUninstaller(index: int):
             system(fr"{UNINSTALLERS_PATH}\uninstall\Troubleshoot\OffScrubC2R.vbs")
         case _:
             return
+
+
+def getYaoCurlConfig(p=False):
+    """获取YAOCTRU的配置"""
+    if not p:
+        return listdir("./YAOCTRU/yaoctru_curls")
+    else:
+        v = 0
+        for i in listdir("./YAOCTRU/yaoctru_curls"):
+            v += 1
+            print(str(v), '.', i.replace(".bat", ''))
+        # return listdir("./YAOCTRU/yaoctru_curls")

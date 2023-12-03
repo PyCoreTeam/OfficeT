@@ -24,3 +24,7 @@ release
 build
 dist
 build.bat
+# YAOCTRU
+YAOCTRU/temp_curl.txt
+YAOCTRU/install.bat
+
