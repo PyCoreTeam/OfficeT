@@ -16,9 +16,10 @@ def checkApi():
         pass
     if response.ok:
         return 'OK'
-
+    del response
 
 def getAPI():
+    f = None
     try:
         f = open("./apis/api.json", 'w')
         f.write(
@@ -26,23 +27,23 @@ def getAPI():
     except Exception as e:
         print(e)
         sys.exit(0)
+    finally:
+        f.close()
+        del f
 
 
 def dumpApi():
     f = open("./apis/api.json", 'r')
+    f.close()
     return load(f)
 
 
 def downloadODP(api):
-    from tqdm import tqdm
     r = requests.get(api, verify=False)
-    total = int(r.headers.get('content-length'))
-    progress_bar = tqdm(total=total, desc="ODP - ")
-    for chunk in r.iter_content(chunk_size=8192):
-        progress_bar.update(len(chunk))
     f = open("./office.zip", 'wb')
     f.write(r.content)
-    progress_bar.close()
+    f.close()
+    del f
 
 
 def getConfigs(p=False):
@@ -69,6 +70,7 @@ def getUninstalls(api):
     with ZipFile("./uninstall/u.zip", 'r') as f:
         f.extractall("./uninstall")
         f.close()
+    del f
 
 
 def initOft(step: int):

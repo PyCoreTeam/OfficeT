@@ -34,6 +34,7 @@ match m:
                 f.close()
             print(getcwd())
             system(fr'{getcwd()}\office\install.bat')
+            del f
     case 2:
         print("Office UnInstall\n卸载需谨慎\n")
         if not path.exists("./uninstall/o15-ctrremove.diagcab"):
@@ -43,5 +44,6 @@ match m:
             input("选择卸载工具\n1.Easy Fix (office2003, 2007, 2010，暂不支持win7及更低版本)\n2.o15ctrremove.diagcab(兼容，全版本)\n3.SaRa("
                   "兼容，全版本，建议使用)\n4.Troubleshoot(全版本)"))
         operationUninstaller(index)
+        del index
     case _:
         print("未知命令。")
