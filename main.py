@@ -3,7 +3,7 @@ from shutil import move, copy
 
 from utils import *
 
-clist = getConfigs(p=False)
+clist = getIstOfficeConfig(p=False)
 for step in range(3):
     initOft(step)
 m = int(input("1.安装Office\n2.卸载Office\n"))
@@ -19,7 +19,7 @@ match m:
                 zip_ref.extractall("./office")
                 zip_ref.close()
 
-        getConfigs(p=True)
+        getIstOfficeConfig(p=True)
         index = int(input("可用配置列表(输入数字): ")) - 1
 
         try:
@@ -39,7 +39,7 @@ match m:
         print("Office UnInstall\n卸载需谨慎\n")
         if not path.exists("./uninstall/o15-ctrremove.diagcab"):
             if input("你还未下载Uninstall组件。是否下载？(y or n)").lower() in ['ok', 'y', 'yes']:
-                getUninstalls(clist['uninstall'])
+                downloadUninstalls(clist['uninstall'])
         index = int(
             input("选择卸载工具\n1.Easy Fix (office2003, 2007, 2010，暂不支持win7及更低版本)\n2.o15ctrremove.diagcab(兼容，全版本)\n3.SaRa("
                   "兼容，全版本，建议使用)\n4.Troubleshoot(全版本)"))
