@@ -20,6 +20,7 @@ uninstall.zip
 uninstall
 oft.*
 release
-# 
+#
 build
 dist
+build.bat
