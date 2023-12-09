@@ -1,5 +1,6 @@
 @setlocal DisableDelayedExpansion
 @echo off
+
 set "_cmdf=%~f0"
 if exist "%SystemRoot%\Sysnative\cmd.exe" (
 setlocal EnableDelayedExpansion
