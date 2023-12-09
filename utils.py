@@ -1,5 +1,5 @@
 import sys
-from os import listdir, mkdir, system, getcwd, remove
+from os import listdir, mkdir, system, getcwd, remove, path, rmdir
 from zipfile import ZipFile
 
 import requests
@@ -139,4 +139,23 @@ def getYaoCurlConfig(p=False):
             v += 1
             print(str(v), '.', i.replace(".bat", ''))
         # return listdir("./YAOCTRU/yaoctru_curls")
-def clearInstalls
+
+
+def clearInstalls():
+    """清除所有安装缓存"""
+    def deleteFiles(_path):
+        try:
+            for file_name in listdir(_path):
+                file_path = path.join(_path, file_name)
+                # 判断是否是文件，如果是文件则删除
+                if path.isfile(file_path):
+                    remove(file_path)
+                # 如果是文件夹，则递归调用该函数
+                elif path.isdir(file_path):
+                    deleteFiles(file_path)
+            rmdir(_path)
+        except:
+            pass
+    for i in YAOTYPES:
+        deleteFiles(f"./YAOCTRU/{i}")
+    deleteFiles("./office/Office")

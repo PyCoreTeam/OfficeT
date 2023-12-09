@@ -6,7 +6,7 @@ from utils import *
 clist = getIstOfficeConfig(p=False)
 for step in range(3):
     initOft(step)
-m = int(input("1.安装Office\n2.卸载Office\n3.YAOCTRU Office安装\n"))
+m = int(input("1.安装Office\n2.卸载Office\n3.YAOCTRU Office安装\n4.清除缓存\n"))
 match m:
     case 1:
         print("API状态" + checkApi())
@@ -26,7 +26,7 @@ match m:
             fn = clist[index]
             copy(f"./configs/{fn}", "./office/")
             rename(f"./office/{fn}", "./office/config.xml")
-        except Exception as e:
+        except:
             pass
         if input("现在安装？(y or n)").lower() in ['y', 'yes', 'ok']:
             with open("./office/install.bat", 'w') as f:
@@ -35,6 +35,7 @@ match m:
             # print(getcwd())
             system(fr'{getcwd()}\office\install.bat')
             del f
+        clearInstalls()
     case 2:
         print("Office UnInstall\n卸载需谨慎\n")
         if not path.exists("./uninstall/o15-ctrremove.diagcab"):
@@ -64,6 +65,9 @@ match m:
             index = int(input("选择一个频道 ")) - 1
             copy("./YAOCTRU/YAOCTRI_Configurator.cmd", f"./YAOCTRU/{YAOTYPES[index]}")
             system(fr'{getcwd()}\YAOCTRU\"{YAOTYPES[index]}\YAOCTRI_Configurator.cmd"')
+        clearInstalls()
+    case 4:
+        clearInstalls()
     case _:
         print("未知命令。")
 
