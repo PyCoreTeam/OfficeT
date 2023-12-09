@@ -6,7 +6,8 @@ import requests
 from json import *
 
 UNINSTALLERS_PATH = fr"{getcwd()}\uninstall"
-YAOTYPES : list[str] = ['C2R_DogfoodDevMain','C2R_InsiderFast']
+YAOTYPES: list[str] = ['C2R_DogfoodDevMain', 'C2R_InsiderFast']
+
 
 def initOft(step: int):
     """初始化程序"""
@@ -123,7 +124,7 @@ def operationUninstaller(index: int):
         case 3:
             system(fr"{UNINSTALLERS_PATH}\ClickOnce\SaraSetup.exe")
         case 4:
-            system(fr"{UNINSTALLERS_PATH}\uninstall\Troubleshoot\OffScrubC2R.vbs")
+            system(fr"{UNINSTALLERS_PATH}\Troubleshoot\OffScrubC2R.vbs")
         case _:
             return
 

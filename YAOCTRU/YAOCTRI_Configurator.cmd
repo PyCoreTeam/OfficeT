@@ -528,13 +528,13 @@ echo Source  : "!CTRsource!"
 echo Version : %CTRver% / Arch: %CTRarc% / Lang: %CTRlng%
 echo %line%
 echo.
-echo. 1. å®‰è£…Office2024å…¨éƒ¨
-if %_O2019%==1 echo. 2. å®‰è£…Office 2019 å•è½¯ä»¶
-if %_O2021%==1 echo. 3. å®‰è£…Office 2021 å•è½¯ä»¶
-:: if %_O2024%==1 echo. 4. å®‰è£…Office2024å•è½¯ä»¶
+echo. 1. °²×°Office2024È«²¿
+if %_O2019%==1 echo. 2. °²×°Office 2019 µ¥Èí¼þ
+if %_O2021%==1 echo. 3. °²×°Office 2021 µ¥Èí¼þ
+:: if %_O2024%==1 echo. 4. °²×°Office2024µ¥Èí¼þ
 echo.
 echo %line%
-choice /c 123X /n /m "é€‰æ‹©ä¸€ä¸ªé€‰é¡¹ "
+choice /c 123X /n /m "Ñ¡ÔñÒ»¸öÑ¡Ïî "
 if errorlevel 4 goto :eof
 if errorlevel 3 (if %_O2021%==1 (goto :Menu21Apps) else (goto :MenuInitial))
 if errorlevel 2 (if %_O2019%==1 (goto :MenuApps) else (goto :MenuInitial))
@@ -554,43 +554,43 @@ echo.
 
 
 
-echo. 1. å¾®è½¯ 365 ä¼ä¸šç‰ˆ : %_O365PP%
+echo. 1. Î¢Èí 365 ÆóÒµ°æ : %_O365PP%
 echo. 2. Office Mondo 2016        : %_Mondo%
 if %_O2021%==1 (
 echo.
-echo. 3. Office ä¸“ä¸šå¢žå¼ºç‰ˆ 2021      : %_O21Pro%
-echo. 4. Office æ™®é€šç‰ˆ 2021     : %_O21Std%
+echo. 3. Office ×¨ÒµÔöÇ¿°æ 2021      : %_O21Pro%
+echo. 4. Office ÆÕÍ¨°æ 2021     : %_O21Std%
 )
 if %_O2021%==1 if %_supv%==1 (
-echo. 5. Project ä¸“ä¸šç‰ˆ2021         : %_O21PrjPro%
-echo. 6. Project æ™®é€šç‰ˆ 2021    : %_O21PrjStd%
-echo. 7. Visio ä¸“ä¸šç‰ˆ2021           : %_O21VisPro%
-echo. 8. Visio æ™®é€šç‰ˆ 2021      : %_O21VisStd%
+echo. 5. Project ×¨Òµ°æ2021         : %_O21PrjPro%
+echo. 6. Project ÆÕÍ¨°æ 2021    : %_O21PrjStd%
+echo. 7. Visio ×¨Òµ°æ2021           : %_O21VisPro%
+echo. 8. Visio ÆÕÍ¨°æ 2021      : %_O21VisStd%
 )
 if %_O2019%==1 (
 echo.
-echo. F. Office ä¸“ä¸šå¢žå¼ºç‰ˆ 2019      : %_O19Pro%
-echo. D. Office æ™®é€šç‰ˆ 2019     : %_O19Std%
+echo. F. Office ×¨ÒµÔöÇ¿°æ 2019      : %_O19Pro%
+echo. D. Office ÆÕÍ¨°æ 2019     : %_O19Std%
 )
 if %_O2019%==1 if %_supv%==1 (
-echo. P. Project ä¸“ä¸šç‰ˆ2019         : %_O19PrjPro%
-echo. R. Project æ™®é€šç‰ˆ 2019    : %_O19PrjStd%
-echo. V. Visio ä¸“ä¸šç‰ˆ2019           : %_O19VisPro%
-echo. S. Visio æ™®é€šç‰ˆ 2019      : %_O19VisStd%
+echo. P. Project ×¨Òµ°æ2019         : %_O19PrjPro%
+echo. R. Project ÆÕÍ¨°æ 2019    : %_O19PrjStd%
+echo. V. Visio ×¨Òµ°æ2019           : %_O19VisPro%
+echo. S. Visio ÆÕÍ¨°æ 2019      : %_O19VisStd%
 )
 if %_O2024%==1 (
 echo.
-echo. G. Office ä¸“ä¸šå¢žå¼ºç‰ˆ 2024      : %_O24Pro%
+echo. G. Office ×¨ÒµÔöÇ¿°æ 2024      : %_O24Pro%
 )
 if %_O2024%==1 if %_supv%==1 (
-echo. W. Project ä¸“ä¸šç‰ˆ2024         : %_O24PrjPro%
-echo. Y. Visio ä¸“ä¸šç‰ˆ2024           : %_O24VisPro%
+echo. W. Project ×¨Òµ°æ2024         : %_O24PrjPro%
+echo. Y. Visio ×¨Òµ°æ2024           : %_O24VisPro%
 )
 
 
 
 echo %line%
-choice /c 123456789FDPRVSGWY0X /n /m "æŒ‰ä¸‹ä½ éœ€è¦çš„ç»„ä»¶çš„å­—æ¯è®¾ç½®å¼€å¯ï¼ŒæŒ‰9è¿”å›žï¼ŒXé€€å‡ºï¼Œ0ç¡®è®¤ "
+choice /c 123456789FDPRVSGWY0X /n /m "°´ÏÂÄãÐèÒªµÄ×é¼þµÄ×ÖÄ¸ÉèÖÃ¿ªÆô£¬°´9·µ»Ø£¬XÍË³ö£¬0È·ÈÏ "
 set errortmp=%errorlevel%
 if %errortmp%==20 goto :eof
 if %errortmp%==19 goto :MenuSuit2
@@ -642,7 +642,7 @@ echo.
 echo. D. OneDrive Desktop      : %_OneDrive%
 if not %_Teams%==0 echo. T. Microsoft Teams       : %_Teams%
 echo %line%
-choice /c AENOPRSWD567890TX /n /m "æŒ‰ä¸‹ä½ éœ€è¦çš„ç»„ä»¶çš„å­—æ¯è®¾ç½®å¼€å¯ï¼ŒæŒ‰9è¿”å›žï¼ŒXé€€å‡ºï¼Œ0ç¡®è®¤ "
+choice /c AENOPRSWD567890TX /n /m "°´ÏÂÄãÐèÒªµÄ×é¼þµÄ×ÖÄ¸ÉèÖÃ¿ªÆô£¬°´9·µ»Ø£¬XÍË³ö£¬0È·ÈÏ "
 set errortmp=%errorlevel%
 if %errortmp%==17 goto :eof
 if %errortmp%==16 if not %_Teams%==0 (if %_Teams%==ON (set _Teams=OFF) else (set _Teams=ON)&goto :MenuApps)
@@ -691,7 +691,7 @@ echo.
 echo. D. OneDrive Desktop      : %_OneDrive%
 if not %_Teams%==0 echo. T. Microsoft Teams       : %_Teams%
 echo %line%
-choice /c AENOPRSWD567890TX /n /m "æŒ‰ä¸‹ä½ éœ€è¦çš„ç»„ä»¶çš„å­—æ¯è®¾ç½®å¼€å¯ï¼ŒæŒ‰9è¿”å›žï¼ŒXé€€å‡ºï¼Œ0ç¡®è®¤ "
+choice /c AENOPRSWD567890TX /n /m "°´ÏÂÄãÐèÒªµÄ×é¼þµÄ×ÖÄ¸ÉèÖÃ¿ªÆô£¬°´9·µ»Ø£¬XÍË³ö£¬0È·ÈÏ "
 set errortmp=%errorlevel%
 if %errortmp%==17 goto :eof
 if %errortmp%==16 if not %_Teams%==0 (if %_Teams%==ON (set _Teams=OFF) else (set _Teams=ON)&goto :Menu21Apps)
@@ -1024,7 +1024,7 @@ echo. V. Visio            : %_Visio%
 echo. D. OneDrive Desktop : %_OneDrive%
 if not %_Teams%==0 echo. T. Microsoft Teams  : %_Teams%
 echo %line%
-choice /c AENOPRSWJVD90TX /n /m "æŒ‰ä¸‹ä½ éœ€è¦çš„ç»„ä»¶çš„å­—æ¯è®¾ç½®å¼€å¯ï¼ŒæŒ‰9è¿”å›žï¼ŒXé€€å‡ºï¼Œ0ç¡®è®¤ "
+choice /c AENOPRSWJVD90TX /n /m "°´ÏÂÄãÐèÒªµÄ×é¼þµÄ×ÖÄ¸ÉèÖÃ¿ªÆô£¬°´9·µ»Ø£¬XÍË³ö£¬0È·ÈÏ "
 if errorlevel 15 goto :eof
 if errorlevel 14 (if not %_Teams%==0 (if %_Teams%==ON (set _Teams=OFF) else (set _Teams=ON)))&goto :MenuExclude
 if errorlevel 13 goto :MenuExcluded
@@ -1065,19 +1065,19 @@ echo Version : %CTRver% / Arch: %CTRarc% / Lang: %CTRlng%
 echo %line%
 echo Select Update Channel:
 echo.
-echo. 0. é»˜è®¤(å»ºè®®)
+echo. 0. Ä¬ÈÏ(½¨Òé)
 echo. 1. Beta    / Insider Fast              ^|   Insiders::DevMain
-echo. 2. Current / æœˆé¢‘é“é¢„è§ˆ           ^|   Insiders::CC
-echo. 3. Current / æœˆé¢‘é“                   ^| Production::CC
+echo. 2. Current / ÔÂÆµµÀÔ¤ÀÀ           ^|   Insiders::CC
+echo. 3. Current / ÔÂÆµµÀ                   ^| Production::CC
 echo.
-echo. 4. ä¼ä¸šç‰ˆæœˆ                  ^| Production::MEC
+echo. 4. ÆóÒµ°æÔÂ                  ^| Production::MEC
 echo. 5. Semi-Annual Preview                 ^|   Insiders::FRDC
 echo. 6. Semi-Annual                         ^| Production::DC
 echo.
 echo. 7. DevMain Channel                     ^|    Dogfood::DevMain
 echo. 8. Microsoft Elite                     ^|  Microsoft::DevMain
 echo %line%
-choice /c 1234567809X /n /m "æŒ‰ä¸‹ä½ éœ€è¦çš„ç»„ä»¶çš„å­—æ¯è®¾ç½®å¼€å¯ï¼ŒæŒ‰9è¿”å›žï¼ŒXé€€å‡º "
+choice /c 1234567809X /n /m "°´ÏÂÄãÐèÒªµÄ×é¼þµÄ×ÖÄ¸ÉèÖÃ¿ªÆô£¬°´9·µ»Ø£¬XÍË³ö "
 if errorlevel 11 goto :eof
 if errorlevel 10 goto :%_return%
 if errorlevel 9 (set inpt=0&goto :MenuChn)
@@ -1204,7 +1204,7 @@ echo. 5. Display Level       : %_disp%
 echo. 6. Auto Activate       : %_actv%
 echo. 7. Disable Telemetry   : %_tele%
 echo %line%
-choice /c 123456709X /n /m "æŒ‰ä¸‹ä½ éœ€è¦çš„ç»„ä»¶çš„å­—æ¯è®¾ç½®å¼€å¯ï¼ŒæŒ‰9è¿”å›žï¼ŒXé€€å‡ºï¼Œ0ç¡®è®¤ "
+choice /c 123456709X /n /m "°´ÏÂÄãÐèÒªµÄ×é¼þµÄ×ÖÄ¸ÉèÖÃ¿ªÆô£¬°´9·µ»Ø£¬XÍË³ö£¬0È·ÈÏ "
 if errorlevel 10 goto :eof
 if errorlevel 9 goto :MenuChannel
 if errorlevel 8 goto :MenuFinal
@@ -1302,7 +1302,7 @@ goto :TheEnd
 
 :MenuInstall
 echo %line%
-echo å‡†å¤‡ä¸­...
+echo ×¼±¸ÖÐ...
 echo %line%
 echo.
 if defined _suite (
@@ -1358,7 +1358,7 @@ expand -f:* "!CTRsource!\Office\Data\%CTRver%\%CTRicabr%" "!_target!" 1>nul 2>nu
 )
 echo.
 echo %line%
-echo è¿è¡Œå®‰è£…ä¸­...
+echo ÔËÐÐ°²×°ÖÐ...
 echo %line%
 echo.
 del /f /q "%SystemRoot%\temp\*.log" 1>nul 2>nul

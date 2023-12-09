@@ -59,10 +59,11 @@ match m:
                     system(fr'{getcwd()}\YAOCTRU\"{cfgs[index]}"')
             i = 0
             for fn in YAOTYPES:
-                i +=1
+                i += 1
                 print(f"{i}. {fn}")
             index = int(input("选择一个频道 ")) - 1
             copy("./YAOCTRU/YAOCTRI_Configurator.cmd", f"./YAOCTRU/{YAOTYPES[index]}")
             system(fr'{getcwd()}\YAOCTRU\"{YAOTYPES[index]}\YAOCTRI_Configurator.cmd"')
     case _:
         print("未知命令。")
+
