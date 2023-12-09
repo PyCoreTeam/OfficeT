@@ -139,7 +139,7 @@ def getYaoCurlConfig(p=False):
             v += 1
             print(str(v), '.', i.replace(".bat", ''))
         # return listdir("./YAOCTRU/yaoctru_curls")
-
+        return ""
 
 def clearInstalls():
     """清除所有安装缓存"""
